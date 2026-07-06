@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luiz Felipe | Portfólio</title>
+    <meta name="description" content="Portfólio profissional de Luiz Felipe - Sistemas e Dados.">
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">LFPE</div>
+        <nav class="nav-links">
+            <a href="#inicio">Início</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#competencias">Competências</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-flex">
+                <div class="hero-content">
+                    <h1>Olá, eu sou o <span class="serif-title">Felipe</span>.</h1>
+                    <p class="subtitle">Desenvolvedor de Sistemas & Analista de Dados</p>
+                    <p class="description">
+                        Estudante de Análise e Desenvolvimento de Sistemas em Gramado/RS. Construo soluções backend estruturadas, crio automações de processos locais no Windows e organizo pipelines analíticos de dados para suporte à decisão.
+                    </p>
+                    <p class="tagline">"Desenvolvendo sistemas funcionais, transformando dados brutos em clareza."</p>
+                    <div class="hero-actions">
+                        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
+                    </div>
+                </div>
+                
+                <!-- Abstract Graphic SVG (Technical Line Art) -->
+                <div class="hero-graphic" aria-hidden="true">
+                    <svg width="280" height="280" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Outer concentric circles -->
+                        <circle cx="100" cy="100" r="90" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" />
+                        <circle cx="100" cy="100" r="70" stroke="rgba(255, 255, 255, 0.06)" stroke-dasharray="3 3" />
+                        <circle cx="100" cy="100" r="50" stroke="rgba(59, 130, 246, 0.15)" stroke-width="1.5" />
+                        <!-- Cross lines -->
+                        <line x1="100" y1="5" x2="100" y2="195" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" />
+                        <line x1="5" y1="100" x2="195" y2="100" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" />
+                        <!-- Diagonal blueprint markers -->
+                        <line x1="30" y1="30" x2="170" y2="170" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1" stroke-dasharray="5 5" />
+                        <!-- Central dot grid & technical vectors -->
+                        <circle cx="100" cy="100" r="4" fill="rgba(59, 130, 246, 0.6)" />
+                        <rect x="85" y="85" width="30" height="30" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />
+                        <circle cx="60" cy="60" r="3" fill="rgba(255, 255, 255, 0.2)" />
+                        <circle cx="140" cy="140" r="3" fill="rgba(255, 255, 255, 0.2)" />
+                        <circle cx="60" cy="140" r="3" fill="rgba(255, 255, 255, 0.2)" />
+                        <circle cx="140" cy="60" r="3" fill="rgba(255, 255, 255, 0.2)" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos Section -->
+        <section id="projetos" class="section">
+            <h2 class="section-title serif-title">Projetos em destaque</h2>
+            <div class="grid grid-3">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <div class="project-meta">
+                            <span class="project-tag">Desenvolvimento</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>System Tracker</h3>
+                        <p>Plataforma para digitalizar fluxos de trabalho e monitorar o controle de qualidade operacional. Backend serverless de alta velocidade e banco relacional na borda.</p>
+                        <div class="project-stack">
+                            <span>React</span>
+                            <span>Hono</span>
+                            <span>Cloudflare D1</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/LFPE/System-tracker" target="_blank" class="project-link">
+                        <span>Acessar projeto</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <div class="project-meta">
+                            <span class="project-tag">Análise de Dados</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>Sales Data Analysis</h3>
+                        <p>Pipeline robusto de ETL para tratamento, limpeza e consolidação de dados brutos de faturamento comercial, incluindo detecção automatizada de anomalias (outliers).</p>
+                        <div class="project-stack">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/LFPE/sales-data-analysis" target="_blank" class="project-link">
+                        <span>Acessar projeto</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <div class="project-meta">
+                            <span class="project-tag">Engenharia de Dados</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>Web Scraping Insights</h3>
+                        <p>Extração automatizada e processamento estruturado de dados imobiliários, permitindo mapeamento de mercado e classificação de custo por metro quadrado.</p>
+                        <div class="project-stack">
+                            <span>Python</span>
+                            <span>BeautifulSoup</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/LFPE/web-scraping-insights" target="_blank" class="project-link">
+                        <span>Acessar projeto</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Competências Section -->
+        <section id="competencias" class="section">
+            <h2 class="section-title serif-title">Competências</h2>
+            <div class="grid grid-2">
+                <!-- Card 1 -->
+                <div class="skill-block">
+                    <h3>Construção de Sistemas</h3>
+                    <p>Desenvolvimento focado em arquitetura backend serverless, otimização de bancos de dados relacionais e utilitários de automação em nível de sistema operacional (Windows/PowerShell).</p>
+                    <div class="tech-pills">
+                        <span>TypeScript</span>
+                        <span>JavaScript</span>
+                        <span>Node.js</span>
+                        <span>Hono</span>
+                        <span>Cloudflare Workers</span>
+                        <span>PostgreSQL</span>
+                        <span>SQLite</span>
+                        <span>React</span>
+                        <span>C++</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="skill-block">
+                    <h3>Dados & Métricas</h3>
+                    <p>Estruturação de pipelines de processamento ETL, higienização de bases brutas de dados comerciais, análise de estatísticas descritivas e modelagem analítica.</p>
+                    <div class="tech-pills">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Power BI</span>
+                        <span>Excel Avançado</span>
+                        <span>Modelagem SQL</span>
+                        <span>Jupyter Notebooks</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="section contact-section">
+            <div class="contact-card">
+                <h2 class="serif-title">Vamos conversar?</h2>
+                <p>Estou aberto a oportunidades profissionais em desenvolvimento backend, projetos de dados e automação. Sinta-se à vontade para entrar em contato diretamente.</p>
+                <div class="contact-actions">
+                    <a href="mailto:luizfelipe17y@gmail.com" class="contact-btn">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>luizfelipe17y@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/LFPE" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-github"></i>
+                        <span>github.com/LFPE</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wrap">
+            <p>&copy; 2026 Luiz Felipe. Gramado/RS.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

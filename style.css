@@ -1,0 +1,519 @@
+/* Premium Designer-Grade Style Sheet (Serif-Editorial Dark Theme) */
+:root {
+    --bg-main: #0a0b10; /* Pure deep slate black */
+    --bg-card: #0f111a; /* Dark card background */
+    --bg-pill: #151824; /* Tag background */
+    --border-color: #1a1e2b; /* Crisp dark border */
+    --border-hover: #2b3247;
+    --accent: #3b82f6; /* Classic Royal Blue */
+    --accent-glow: rgba(59, 130, 246, 0.03); /* Soft ambient backlight */
+    --text-primary: #f3f4f6; /* Gray 100 */
+    --text-secondary: #9ca3af; /* Gray 400 */
+    --text-muted: #6b7280; /* Gray 500 */
+    --font-sans: 'Inter', -apple-system, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --max-width: 960px;
+    --border-radius: 8px;
+    --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 70px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Soft ambient background gradient glow (not neon, very elegant) */
+body::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header & Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(10, 11, 16, 0.7);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 8%;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    position: relative;
+    padding-bottom: 4px;
+    transition: var(--transition);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--accent);
+    transition: width 0.25s ease-in-out, left 0.25s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Typography styles */
+.serif-title {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0;
+}
+
+.hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+
+.hero h1 {
+    font-size: 3.75rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+}
+
+.hero .subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+}
+
+.hero .description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    border-left: 2px solid var(--border-color);
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Hero Graphic (Technical Line Art) */
+.hero-graphic {
+    flex-shrink: 0;
+}
+
+.hero-graphic svg {
+    animation: rotate-slow 40s linear infinite;
+}
+
+@keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Button UI (Sharp & Clean) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.6rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--text-primary);
+    color: var(--bg-main);
+    border: 1px solid var(--text-primary);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--text-primary);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
+/* Section styling */
+.section {
+    padding: 7rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-bottom: 3.5rem;
+}
+
+/* Grid systems */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Project Cards (High fidelity) */
+.project-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+    min-height: 380px;
+}
+
+.project-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+}
+
+.project-year {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.project-stack span {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-pill);
+    border: 1px solid var(--border-color);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+}
+
+/* Project Clean Link */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.project-link i {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover .project-link {
+    color: var(--accent);
+}
+
+.project-card:hover .project-link i {
+    transform: translateX(4px);
+}
+
+/* Skill block design */
+.skill-block {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+}
+
+.skill-block h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.skill-block p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-pills span {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-pill);
+    border: 1px solid var(--border-color);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.tech-pills span:hover {
+    border-color: var(--accent);
+    color: #ffffff;
+}
+
+/* Contact Section (High Polish) */
+.contact-section {
+    text-align: center;
+    border-bottom: none;
+}
+
+.contact-card h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 550px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.contact-btn:hover {
+    border-color: var(--accent);
+    background-color: var(--bg-pill);
+}
+
+/* Footer layout */
+footer {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.src-code-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.src-code-link:hover {
+    color: var(--text-primary);
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    .navbar {
+        height: 60px;
+        padding: 0 5%;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+    .hero .subtitle {
+        font-size: 1.15rem;
+    }
+    .hero-flex {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .hero-graphic {
+        display: none;
+    }
+    .hero-actions {
+        flex-direction: column;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    .project-card {
+        min-height: auto;
+    }
+    .skill-block {
+        padding: 1.75rem;
+    }
+    .footer-wrap {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
